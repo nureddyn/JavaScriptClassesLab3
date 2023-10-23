@@ -86,14 +86,4 @@ class Person {
         hamster.owner = this.name;
     }
 }
-
 const person1 = new Person("Juan");
-person1.ageUp();
-person1.ageUp();
-person1.buyHamster(hamster1);
-// console.log(person1);
-
-console.log(person1.getAge());
-console.log(person1.getName());
-console.log(person1.getWeight());
-person1.greet();
