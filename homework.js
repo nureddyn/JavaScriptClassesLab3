@@ -1,6 +1,5 @@
 // Each comment points to the specification provided by the task.
 
-//
 class Hamster {
     constructor(name) {
         // name - string, set the name from parameter in constructor method
@@ -23,7 +22,7 @@ class Hamster {
         return this.price;
     }
 }
-const hamster1 = new Hamster("Arthur");
+
 
 class Person {
     constructor(name) {
@@ -86,4 +85,36 @@ class Person {
         hamster.owner = this.name;
     }
 }
-const person1 = new Person("Juan");
+
+
+// ======= Story =========
+
+// Instantiate a new Person named Timmy
+const Timmy = new Person("Timmy");
+
+// Age Timmy five years
+for (let year = 0; year < 5; year++) Timmy.ageUp();
+
+/*At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already.
+Have him eat five times.*/
+for (let times = 0; times < 5; times++) Timmy.eat();
+
+/*Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good.
+Have him exercise five times*/
+for (let times = 0; times < 5; times++) Timmy.exercise();
+
+// Age Timmy 9 years
+for (let times = 0; times < 4; times++) Timmy.ageUp();
+
+// Create a hamster named "Gus"
+const Gus = new Hamster("Gus");
+// Set Gus's owner to the string "Timmy"
+Gus.owner = Timmy.getName();
+// Have Timmy "buy" Gus
+Timmy.buyHamster(Gus);
+// Age Timmy 15 years
+for (let year = 0; year < 6; year++) Timmy.ageUp();
+// Have Timmy eat twice
+for (let eat = 0; eat < 2; eat++) Timmy.eat();
+// Have Timmy exercise twice
+for (let eat = 0; eat < 2; eat++) Timmy.exercise();
