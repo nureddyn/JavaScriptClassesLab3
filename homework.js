@@ -1,5 +1,6 @@
 // Each comment points to the specification provided by the task.
 
+// Hamster
 class Hamster {
     constructor(name) {
         // name - string, set the name from parameter in constructor method
@@ -23,7 +24,7 @@ class Hamster {
     }
 }
 
-
+// Person
 class Person {
     constructor(name) {
         // name - set name from parameter in constructor method
@@ -87,7 +88,7 @@ class Person {
 }
 
 
-// ======= Story =========
+// ======= Create a Story with your Person class =========
 
 // Instantiate a new Person named Timmy
 const Timmy = new Person("Timmy");
@@ -118,3 +119,34 @@ for (let year = 0; year < 6; year++) Timmy.ageUp();
 for (let eat = 0; eat < 2; eat++) Timmy.eat();
 // Have Timmy exercise twice
 for (let eat = 0; eat < 2; eat++) Timmy.exercise();
+
+
+// Chef Make Dinners
+class Dinner {
+    // Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+    constructor(appetizer, entree, dessert) {
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+
+}
+
+
+// Factory
+class Chef {
+    // Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+    cook(appetizer, entree, dessert) {
+        const dinner = new Dinner(appetizer, entree, dessert);
+        return dinner;
+    }
+}
+
+// Have the Chef create 3 dinners, log the dinners
+let chef = new Chef();
+const dinner1 = chef.cook("Brioche Crab Melts", "Grilled Rib Eye Steak", "Fruit");
+const dinner2 = chef.cook("Caramelized Onion Dip", "Chicken Marsala", "Cheesecake");
+const dinner3 = chef.cook("Hogs in a Blanket", "Lasagna", "Ice Cream");
+console.log(dinner1);
+console.log(dinner2);
+console.log(dinner3);
